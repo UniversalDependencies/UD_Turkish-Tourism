@@ -1,20 +1,15 @@
 # Summary
 
-A corpus specific to the tourism domain consisting of 20,000 manually annotated sentences.
-
+Turkish Tourism is a domain specific treebank consisting of 19.750 manually annotated sentences and 92200 tokens. These sentences were taken from the original customer reviews of a tourism company.
 
 # Introduction
-
-...
+Turkish Tourism is the first domain specific treebank of Turkish. It consists of 19.750 manually annotated sentences and and 92200 tokens. The corpus consists of hotel/restaurant reviews of a booking company. 
+The data is split into half by test and training files.
 
 
 # Acknowledgments
 
-...
-
-## References
-
-* (citation)
+We wish to thank the Starlang Software Company for funding and supporting this work.
 
 
 # Changelog
@@ -28,14 +23,14 @@ A corpus specific to the tourism domain consisting of 20,000 manually annotated 
 Data available since: UD v2.8
 License: CC BY-SA 4.0
 Includes text: yes
-Genre: nonfiction
+Genre: reviews
 Lemmas: converted from manual
 UPOS: converted from manual
-XPOS: manual native
+XPOS: converted from manual
 Features: converted from manual
 Relations: converted from manual
-Contributors: Kuzgun, Aslı
+Contributors: Kuzgun, Aslı; Cesur, Neslihan; Yıldız, Olcay Taner; Kuyrukçu, Oğuzhan; Marşan, Büşra; Arıcan, Bilge Nas; Kara, Neslihan; Aslan, Deniz Baran; Sanıyar, Ezgi
 Contributing: elsewhere
-Contact: asli.kuzgun@boun.edu.tr
+Contact: asli@starlangyazilim.com / olcay.yildiz@ozyegin.edu.tr 
 ===============================================================================
 </pre>
