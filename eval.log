@@ -1,13 +1,13 @@
 Running the following version of UD tools:
-commit 3478a99bb195eb8749c367af4f7b3fd357a12a4c
-Author: Dan Zeman <zeman@ufal.mff.cuni.cz>
-Date:   Tue Nov 2 22:17:19 2021 +0100
+commit ba6fbf413cb14afa25145b931c79fb60ef9456e2
+Author: www-data (nschneid) <nschneid@github.com>
+Date:   Wed May 11 05:10:30 2022 +0200
 Evaluating the following revision of UD_Turkish-Tourism:
-commit fe3d156755eb5315d522ebdff9b6461c1721b0ec
-Merge: 1b3a529 3e3aa02
+commit 744f88e37674286ab332db54bc89972b5af6179f
+Merge: 453274f 879d342
 Author: Dan Zeman <zeman@ufal.mff.cuni.cz>
-Size: counted 91733 of 91733 words (nodes).
-Size: min(0, log((N/1000)**2)) = 9.03776436732709.
+Size: counted 91469 of 91469 words (nodes).
+Size: min(0, log((N/1000)**2)) = 9.03200023412465.
 Size: maximum value 13.815511 is for 1000000 words or more.
 Split: Found more than 10000 training words.
 Split: Found at least 10000 development words.
@@ -15,14 +15,14 @@ Split: Found at least 10000 test words.
 Lemmas: source of annotation (from README) factor is 0.8.
 Universal POS tags: 15 out of 17 found in the corpus.
 Universal POS tags: source of annotation (from README) factor is 0.8.
-Features: 51136 out of 91733 total words have one or more features.
+Features: 50898 out of 91469 total words have one or more features.
 Features: source of annotation (from README) factor is 0.8.
 Universal relations: 33 out of 37 found in the corpus.
 Universal relations: source of annotation (from README) factor is 0.8.
 Udapi:
-               TOTAL         34
-Udapi: found 34 bugs.
-Udapi: worst expected case (threshold) is one bug per 10 words. There are 91733 words.
+               TOTAL         32
+Udapi: found 32 bugs.
+Udapi: worst expected case (threshold) is one bug per 10 words. There are 91469 words.
 Genres: found 1 out of 17 known.
 validate.py --lang tr --max-err=10 UD_Turkish-Tourism/tr_tourism-ud-dev.conllu
 *** PASSED ***
@@ -34,11 +34,11 @@ Validity: 1
 (weight=0.0769230769230769) * (score{features}=0.8) = 0.0615384615384615
 (weight=0.0769230769230769) * (score{genres}=0.0588235294117647) = 0.00452488687782805
 (weight=0.0769230769230769) * (score{lemmas}=0.8) = 0.0615384615384615
-(weight=0.256410256410256) * (score{size}=0.654175198911998) = 0.167737230490256
+(weight=0.256410256410256) * (score{size}=0.653757977038202) = 0.167630250522616
 (weight=0.0512820512820513) * (score{split}=1) = 0.0512820512820513
 (weight=0.0769230769230769) * (score{tags}=0.705882352941177) = 0.0542986425339367
-(weight=0.307692307692308) * (score{udapi}=0.996293591183107) = 0.306551874210187
+(weight=0.307692307692308) * (score{udapi}=0.996501546972198) = 0.30661586060683
 (weight=0.0769230769230769) * (score{udeprels}=0.713513513513514) = 0.0548856548856549
-(TOTAL score=0.762357263356837) * (availability=1) * (validity=1) = 0.762357263356837
+(TOTAL score=0.76231426978584) * (availability=1) * (validity=1) = 0.76231426978584
 STARS = 4
-UD_Turkish-Tourism	0.762357263356837	4
+UD_Turkish-Tourism	0.76231426978584	4
