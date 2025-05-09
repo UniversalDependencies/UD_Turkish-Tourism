@@ -1,11 +1,11 @@
 Running the following version of UD tools:
-commit c1984d97df0ecdcc1b50fbeaa8c96419c6321432
+commit ecbbdff44b15c9b6de4a691e3499c1286459ab2e
 Author: Dan Zeman <zeman@ufal.mff.cuni.cz>
-Date:   Sun Nov 10 10:33:45 2024 +0100
+Date:   Fri May 9 21:07:42 2025 +0200
 Evaluating the following revision of UD_Turkish-Tourism:
-commit e76855d247de1ba0e5c898b8574fe2a4d5e7db07
+commit 4f9b9898ee9d262920ff36535f1a8bf0ef60a7c0
 Author: Dan Zeman <zeman@ufal.mff.cuni.cz>
-Date:   Sun May 5 13:37:10 2024 +0200
+Date:   Mon Nov 11 16:46:51 2024 +0100
 Size: counted 91152 of 91152 words (nodes).
 Size: min(0, log((N/1000)**2)) = 9.02505688547608.
 Size: maximum value 13.815511 is for 1000000 words or more.
@@ -23,40 +23,69 @@ Udapi:
                TOTAL         32
 Udapi: found 32 bugs.
 Udapi: worst expected case (threshold) is one bug per 10 words. There are 91152 words.
-Genres: found 1 out of 17 known.
+Genres: found 1 out of 18 known.
 /net/work/people/zeman/unidep/tools/validate.py --lang tr --max-err=10 UD_Turkish-Tourism/tr_tourism-ud-dev.conllu
-[Line 1689 Sent 7992.train Node 4]: [L3 Warning leaf-det] 'det' not expected to have children (4:BİR:det --> 3:HİÇ:amod)
-[Line 2023 Sent 8040.train Node 7]: [L3 Warning leaf-det] 'det' not expected to have children (7:BİR:det --> 6:BAŞKA:amod)
-[Line 8488 Sent 8896.train Node 2]: [L3 Warning leaf-det] 'det' not expected to have children (2:BİR:det --> 1:GÜZEL:amod)
-[Line 11018 Sent 9260.train Node 3]: [L3 Warning leaf-det] 'det' not expected to have children (3:BİR:det --> 2:HİÇ:amod)
-[Line 11027 Sent 9261.train Node 3]: [L3 Warning leaf-det] 'det' not expected to have children (3:BİR:det --> 2:HİÇ:amod)
-Warnings: 5
-*** PASSED ***
+[Line 1689 Sent 7992.train Node 4]: [L3 Syntax leaf-det] 'det' not expected to have children (4:BİR:det --> 3:HİÇ:amod)
+[Line 2023 Sent 8040.train Node 7]: [L3 Syntax leaf-det] 'det' not expected to have children (7:BİR:det --> 6:BAŞKA:amod)
+[Line 2103 Sent 8050.train Node 2]: [L3 Warning fixed-without-extpos] Fixed expression 'BİR DAHA' does not have the 'ExtPos' feature
+[Line 2322 Sent 8079.train Node 1]: [L3 Warning fixed-without-extpos] Fixed expression 'BUNDAN SONRA' does not have the 'ExtPos' feature
+[Line 2388 Sent 8088.train Node 1]: [L3 Warning fixed-without-extpos] Fixed expression 'BİR TEK' does not have the 'ExtPos' feature
+[Line 3119 Sent 8188.train Node 1]: [L3 Warning fixed-without-extpos] Fixed expression 'HERHANGİ BİR' does not have the 'ExtPos' feature
+[Line 3519 Sent 8242.train Node 4]: [L3 Warning fixed-without-extpos] Fixed expression 'NE ZAMAN' does not have the 'ExtPos' feature
+[Line 3870 Sent 8286.train Node 5]: [L3 Warning fixed-without-extpos] Fixed expression 'NE ZAMAN' does not have the 'ExtPos' feature
+[Line 3881 Sent 8287.train Node 5]: [L3 Warning fixed-without-extpos] Fixed expression 'NE ZAMAN' does not have the 'ExtPos' feature
+[Line 7951 Sent 8827.train Node 1]: [L3 Warning fixed-without-extpos] Fixed expression 'O KADAR' does not have the 'ExtPos' feature
+[Line 8488 Sent 8896.train Node 2]: [L3 Syntax leaf-det] 'det' not expected to have children (2:BİR:det --> 1:GÜZEL:amod)
+[Line 11018 Sent 9260.train Node 3]: [L3 Syntax leaf-det] 'det' not expected to have children (3:BİR:det --> 2:HİÇ:amod)
+[Line 11027 Sent 9261.train Node 3]: [L3 Syntax leaf-det] 'det' not expected to have children (3:BİR:det --> 2:HİÇ:amod)
+[Line 12200 Sent 9415.train Node 1]: [L3 Warning fixed-without-extpos] Fixed expression 'BU KADAR' does not have the 'ExtPos' feature
+[Line 12631 Sent 9456.train Node 1]: [L3 Warning fixed-without-extpos] Fixed expression 'BİR DAHA' does not have the 'ExtPos' feature
+...suppressing further errors regarding Warning
+Syntax errors: 5
+Warnings: 15
+*** FAILED *** with 5 errors
+Exit code: 1
 /net/work/people/zeman/unidep/tools/validate.py --lang tr --max-err=10 UD_Turkish-Tourism/tr_tourism-ud-test.conllu
+[Line 2277 Sent 8051.test Node 1]: [L3 Warning fixed-without-extpos] Fixed expression 'HİÇ KİMSEYE' does not have the 'ExtPos' feature
+[Line 2285 Sent 8052.test Node 1]: [L3 Warning fixed-without-extpos] Fixed expression 'HİÇ KİMSEYE' does not have the 'ExtPos' feature
+Warnings: 2
 *** PASSED ***
 /net/work/people/zeman/unidep/tools/validate.py --lang tr --max-err=10 UD_Turkish-Tourism/tr_tourism-ud-train.conllu
-[Line 3291 Sent 0499.train Node 3]: [L3 Warning leaf-det] 'det' not expected to have children (3:BİR:det --> 2:İYİ:amod)
-[Line 6394 Sent 0944.train Node 2]: [L3 Warning leaf-det] 'det' not expected to have children (2:BİR:det --> 1:ZENGİN:amod)
-[Line 6402 Sent 0945.train Node 2]: [L3 Warning leaf-det] 'det' not expected to have children (2:BİR:det --> 1:ZENGİN:amod)
-[Line 10607 Sent 1539.train Node 2]: [L3 Warning leaf-det] 'det' not expected to have children (2:BİR:det --> 1:HİÇ:amod)
-[Line 27852 Sent 3867.train Node 2]: [L3 Warning leaf-det] 'det' not expected to have children (2:BİR:det --> 1:HERHANGİ:amod)
-[Line 30300 Sent 4197.train Node 2]: [L3 Warning leaf-det] 'det' not expected to have children (2:BİR:det --> 1:HİÇ:amod)
-[Line 51792 Sent 7041.train Node 3]: [L3 Warning leaf-det] 'det' not expected to have children (3:BİR:det --> 2:GİDİLEBİLECEK:amod)
-[Line 72967 Sent 2058.test Node 2]: [L3 Warning leaf-det] 'det' not expected to have children (2:BİR:det --> 1:TAM:amod)
-[Line 72976 Sent 2059.test Node 2]: [L3 Warning leaf-det] 'det' not expected to have children (2:BİR:det --> 1:TAM:amod)
-[Line 75145 Sent 2355.test Node 2]: [L3 Warning leaf-det] 'det' not expected to have children (2:HER:det --> 1:ULTRA:amod)
+[Line 2784 Sent 0427.train Node 1]: [L3 Warning fixed-without-extpos] Fixed expression 'TABİ Kİ' does not have the 'ExtPos' feature
+[Line 3291 Sent 0499.train Node 3]: [L3 Syntax leaf-det] 'det' not expected to have children (3:BİR:det --> 2:İYİ:amod)
+[Line 6394 Sent 0944.train Node 2]: [L3 Syntax leaf-det] 'det' not expected to have children (2:BİR:det --> 1:ZENGİN:amod)
+[Line 6402 Sent 0945.train Node 2]: [L3 Syntax leaf-det] 'det' not expected to have children (2:BİR:det --> 1:ZENGİN:amod)
+[Line 10607 Sent 1539.train Node 2]: [L3 Syntax leaf-det] 'det' not expected to have children (2:BİR:det --> 1:HİÇ:amod)
+[Line 15003 Sent 2148.train Node 1]: [L3 Warning fixed-without-extpos] Fixed expression 'HİÇ BİR' does not have the 'ExtPos' feature
+[Line 18241 Sent 2579.train Node 1]: [L3 Warning fixed-without-extpos] Fixed expression 'HİÇ BİR' does not have the 'ExtPos' feature
+[Line 20675 Sent 2920.train Node 3]: [L3 Warning fixed-without-extpos] Fixed expression 'HER ŞEY' does not have the 'ExtPos' feature
+[Line 23525 Sent 3307.train Node 1]: [L3 Warning fixed-without-extpos] Fixed expression 'ONLAR DA' does not have the 'ExtPos' feature
+[Line 23551 Sent 3311.train Node 1]: [L3 Warning fixed-without-extpos] Fixed expression 'ONLAR DA' does not have the 'ExtPos' feature
+[Line 23590 Sent 3314.train Node 12]: [L3 Warning fixed-without-extpos] Fixed expression 'KOLTUK VS' does not have the 'ExtPos' feature
+[Line 27329 Sent 3794.train Node 1]: [L3 Warning fixed-without-extpos] Fixed expression 'EH İŞTE' does not have the 'ExtPos' feature
+[Line 27852 Sent 3867.train Node 2]: [L3 Syntax leaf-det] 'det' not expected to have children (2:BİR:det --> 1:HERHANGİ:amod)
+[Line 30300 Sent 4197.train Node 2]: [L3 Syntax leaf-det] 'det' not expected to have children (2:BİR:det --> 1:HİÇ:amod)
+[Line 41357 Sent 5663.train Node 1]: [L3 Warning fixed-without-extpos] Fixed expression 'TABİ Kİ' does not have the 'ExtPos' feature
+[Line 43333 Sent 5929.train Node 1]: [L3 Warning fixed-without-extpos] Fixed expression 'EH İŞTE' does not have the 'ExtPos' feature
 ...suppressing further errors regarding Warning
-Warnings: 15
-*** PASSED ***
-Validity: 1
+[Line 51792 Sent 7041.train Node 3]: [L3 Syntax leaf-det] 'det' not expected to have children (3:BİR:det --> 2:GİDİLEBİLECEK:amod)
+[Line 72967 Sent 2058.test Node 2]: [L3 Syntax leaf-det] 'det' not expected to have children (2:BİR:det --> 1:TAM:amod)
+[Line 72976 Sent 2059.test Node 2]: [L3 Syntax leaf-det] 'det' not expected to have children (2:BİR:det --> 1:TAM:amod)
+[Line 75145 Sent 2355.test Node 2]: [L3 Syntax leaf-det] 'det' not expected to have children (2:HER:det --> 1:ULTRA:amod)
+...suppressing further errors regarding Syntax
+Syntax errors: 15
+Warnings: 36
+*** FAILED *** with 15 errors
+Exit code: 1
+Validity: 0.01
 (weight=0.0769230769230769) * (score{features}=0.8) = 0.0615384615384615
-(weight=0.0769230769230769) * (score{genres}=0.0588235294117647) = 0.00452488687782805
+(weight=0.0769230769230769) * (score{genres}=0.0555555555555556) = 0.00427350427350427
 (weight=0.0769230769230769) * (score{lemmas}=0.8) = 0.0615384615384615
 (weight=0.256410256410256) * (score{size}=0.653255400704202) = 0.167501384795949
 (weight=0.0512820512820513) * (score{split}=1) = 0.0512820512820513
 (weight=0.0769230769230769) * (score{tags}=0.705882352941177) = 0.0542986425339367
 (weight=0.307692307692308) * (score{udapi}=0.996489380375636) = 0.306612117038657
 (weight=0.0769230769230769) * (score{udeprels}=0.713513513513514) = 0.0548856548856549
-(TOTAL score=0.762181660491) * (availability=1) * (validity=1) = 0.762181660491
-STARS = 4
-UD_Turkish-Tourism	0.762181660491	4
+(TOTAL score=0.761930277886677) * (availability=1) * (validity=0.01) = 0.00761930277886677
+STARS = 0
+UD_Turkish-Tourism	0.00761930277886677	0
