@@ -1,10 +1,10 @@
 Running the following version of UD tools:
-commit 26e6c87a2f518322d15901a351199b6be6569062
+commit b39dc4111bb13658bc0c204b48bb78b492e45d2b
 Author: Dan Zeman <zeman@ufal.mff.cuni.cz>
-Date:   Fri Nov 7 15:39:58 2025 +0100
+Date:   Tue May 5 17:01:41 2026 +0200
 Evaluating the following revision of UD_Turkish-Tourism:
-commit 45b582ce20bb34fc54a68868b88fdc5b40ac92c9
-Merge: e410880 62354d2
+commit 5664812da571a7603647d009632fa8068ec57980
+Merge: 5c7c375 f33e770
 Author: Dan Zeman <zeman@ufal.mff.cuni.cz>
 CoNLL-U data file regular expression = '(.+)-ud-(train|dev|test)\.conllu'
 Language-treebank code (from CoNLL-U file name) = 'tr_tourism'
@@ -19,69 +19,55 @@ Split: Found at least 10000 test words.
 Lemmas: source of annotation (from README) factor is 0.8.
 Universal POS tags: 15 out of 17 found in the corpus.
 Universal POS tags: source of annotation (from README) factor is 0.8.
-Features: 50894 out of 91152 total words have one or more features.
+Features: 52956 out of 91152 total words have one or more features.
 Features: source of annotation (from README) factor is 0.8.
 Universal relations: 33 out of 37 found in the corpus.
 Universal relations: source of annotation (from README) factor is 0.8.
 Genres: found 1 out of 18 known.
 /net/work/people/zeman/unidep/tools/validate.py --lang tr --max-err=10 UD_Turkish-Tourism/tr_tourism-ud-dev.conllu
-[Line 1013 Sent 7891.train]: [L3 Warning obl-should-be-nmod] The parent (node [2] 'İHTİYACIM') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
-[Line 1689 Sent 7992.train]: [L3 Syntax leaf-det] 'det' not expected to have children (4:BİR:det --> 3:HİÇ:amod)
-[Line 1797 Sent 8016.train]: [L3 Warning obl-should-be-nmod] The parent (node [5] 'SERVİS') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
-[Line 2023 Sent 8040.train]: [L3 Syntax leaf-det] 'det' not expected to have children (7:BİR:det --> 6:BAŞKA:amod)
-[Line 2079 Sent 8048.train]: [L3 Warning obl-should-be-nmod] The parent (node [6] 'KALMAK') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
-[Line 2083 Sent 8048.train]: [L3 Warning obl-should-be-nmod] The parent (node [6] 'KALMAK') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
-[Line 2103 Sent 8050.train]: [L3 Warning fixed-without-extpos] Fixed expression 'BİR DAHA' does not have the 'ExtPos' feature
-[Line 2322 Sent 8079.train]: [L3 Warning fixed-without-extpos] Fixed expression 'BUNDAN SONRA' does not have the 'ExtPos' feature
-[Line 2388 Sent 8088.train]: [L3 Warning fixed-without-extpos] Fixed expression 'BİR TEK' does not have the 'ExtPos' feature
-[Line 3119 Sent 8188.train]: [L3 Warning fixed-without-extpos] Fixed expression 'HERHANGİ BİR' does not have the 'ExtPos' feature
-[Line 3519 Sent 8242.train]: [L3 Warning fixed-without-extpos] Fixed expression 'NE ZAMAN' does not have the 'ExtPos' feature
-[Line 3870 Sent 8286.train]: [L3 Warning fixed-without-extpos] Fixed expression 'NE ZAMAN' does not have the 'ExtPos' feature
-...suppressing further errors regarding Warning
-[Line 8488 Sent 8896.train]: [L3 Syntax leaf-det] 'det' not expected to have children (2:BİR:det --> 1:GÜZEL:amod)
-[Line 11018 Sent 9260.train]: [L3 Syntax leaf-det] 'det' not expected to have children (3:BİR:det --> 2:HİÇ:amod)
-[Line 11027 Sent 9261.train]: [L3 Syntax leaf-det] 'det' not expected to have children (3:BİR:det --> 2:HİÇ:amod)
-Syntax errors: 5
-Warnings: 28
-*** FAILED *** with 5 errors
-Exit code: 1
+[Line 2103 Sent 8050.train]: [L3 WARNING fixed-without-extpos] Fixed expression 'bir daha' does not have the 'ExtPos' feature
+[Line 2388 Sent 8088.train]: [L3 WARNING fixed-without-extpos] Fixed expression 'Bir tek' does not have the 'ExtPos' feature
+[Line 3519 Sent 8242.train]: [L3 WARNING fixed-without-extpos] Fixed expression 'ne zaman' does not have the 'ExtPos' feature
+[Line 3870 Sent 8286.train]: [L3 WARNING fixed-without-extpos] Fixed expression 'ne zaman' does not have the 'ExtPos' feature
+[Line 3881 Sent 8287.train]: [L3 WARNING fixed-without-extpos] Fixed expression 'ne zaman' does not have the 'ExtPos' feature
+[Line 7951 Sent 8827.train]: [L3 WARNING fixed-without-extpos] Fixed expression 'O kadar' does not have the 'ExtPos' feature
+[Line 12684 Sent 9459.train]: [L3 WARNING fixed-without-extpos] Fixed expression 'bir daha' does not have the 'ExtPos' feature
+[Line 15544 Sent 9845.train]: [L3 WARNING fixed-without-extpos] Fixed expression 'Bu kadar' does not have the 'ExtPos' feature
+[Line 15553 Sent 9846.train]: [L3 WARNING fixed-without-extpos] Fixed expression 'Bu kadar' does not have the 'ExtPos' feature
+Warnings: 9
+*** PASSED ***
 /net/work/people/zeman/unidep/tools/validate.py --lang tr --max-err=10 UD_Turkish-Tourism/tr_tourism-ud-test.conllu
-[Line 533 Sent 7808.test]: [L3 Warning obl-should-be-nmod] The parent (node [11] 'HAZIRLANDIĞINA') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
-[Line 678 Sent 7821.test]: [L3 Warning obl-should-be-nmod] The parent (node [8] 'VERMEYE') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
-[Line 1723 Sent 7972.test]: [L3 Warning obl-should-be-nmod] The parent (node [5] 'HİZMET') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
-[Line 2277 Sent 8051.test]: [L3 Warning fixed-without-extpos] Fixed expression 'HİÇ KİMSEYE' does not have the 'ExtPos' feature
-[Line 2285 Sent 8052.test]: [L3 Warning fixed-without-extpos] Fixed expression 'HİÇ KİMSEYE' does not have the 'ExtPos' feature
-[Line 3045 Sent 8163.test]: [L3 Warning obl-should-be-nmod] The parent (node [4] 'KARŞILIK') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
-Warnings: 6
+[Line 199 Sent 7776.test]: [L3 WARNING pron-det-without-prontype] The word 'çok' is tagged 'DET' but it lacks the 'PronType' feature
+[Line 1590 Sent 7954.test]: [L3 WARNING pron-det-without-prontype] The word 'dörtlük' is tagged 'DET' but it lacks the 'PronType' feature
+[Line 9994 Sent 9109.test]: [L3 WARNING pron-det-without-prontype] The word 'çok' is tagged 'DET' but it lacks the 'PronType' feature
+Warnings: 3
 *** PASSED ***
 /net/work/people/zeman/unidep/tools/validate.py --lang tr --max-err=10 UD_Turkish-Tourism/tr_tourism-ud-train.conllu
-[Line 2784 Sent 0427.train]: [L3 Warning fixed-without-extpos] Fixed expression 'TABİ Kİ' does not have the 'ExtPos' feature
-[Line 3291 Sent 0499.train]: [L3 Syntax leaf-det] 'det' not expected to have children (3:BİR:det --> 2:İYİ:amod)
-[Line 6394 Sent 0944.train]: [L3 Syntax leaf-det] 'det' not expected to have children (2:BİR:det --> 1:ZENGİN:amod)
-[Line 6402 Sent 0945.train]: [L3 Syntax leaf-det] 'det' not expected to have children (2:BİR:det --> 1:ZENGİN:amod)
-[Line 10607 Sent 1539.train]: [L3 Syntax leaf-det] 'det' not expected to have children (2:BİR:det --> 1:HİÇ:amod)
-[Line 11636 Sent 1681.train]: [L3 Warning obl-should-be-nmod] The parent (node [2] 'GELMEK') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
-[Line 15003 Sent 2148.train]: [L3 Warning fixed-without-extpos] Fixed expression 'HİÇ BİR' does not have the 'ExtPos' feature
-[Line 18241 Sent 2579.train]: [L3 Warning fixed-without-extpos] Fixed expression 'HİÇ BİR' does not have the 'ExtPos' feature
-[Line 20675 Sent 2920.train]: [L3 Warning fixed-without-extpos] Fixed expression 'HER ŞEY' does not have the 'ExtPos' feature
-[Line 22550 Sent 3174.train]: [L3 Warning obl-should-be-nmod] The parent (node [6] 'GELECEĞİNİ') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
-[Line 23525 Sent 3307.train]: [L3 Warning fixed-without-extpos] Fixed expression 'ONLAR DA' does not have the 'ExtPos' feature
-[Line 23551 Sent 3311.train]: [L3 Warning fixed-without-extpos] Fixed expression 'ONLAR DA' does not have the 'ExtPos' feature
-[Line 23588 Sent 3314.train]: [L3 Warning obl-should-be-nmod] The parent (node [12] 'KOLTUK') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
-[Line 23590 Sent 3314.train]: [L3 Warning fixed-without-extpos] Fixed expression 'KOLTUK VS' does not have the 'ExtPos' feature
-...suppressing further errors regarding Warning
-[Line 27852 Sent 3867.train]: [L3 Syntax leaf-det] 'det' not expected to have children (2:BİR:det --> 1:HERHANGİ:amod)
-[Line 30300 Sent 4197.train]: [L3 Syntax leaf-det] 'det' not expected to have children (2:BİR:det --> 1:HİÇ:amod)
-[Line 51792 Sent 7041.train]: [L3 Syntax leaf-det] 'det' not expected to have children (3:BİR:det --> 2:GİDİLEBİLECEK:amod)
-[Line 72967 Sent 2058.test]: [L3 Syntax leaf-det] 'det' not expected to have children (2:BİR:det --> 1:TAM:amod)
-[Line 72976 Sent 2059.test]: [L3 Syntax leaf-det] 'det' not expected to have children (2:BİR:det --> 1:TAM:amod)
-[Line 75145 Sent 2355.test]: [L3 Syntax leaf-det] 'det' not expected to have children (2:HER:det --> 1:ULTRA:amod)
-...suppressing further errors regarding Syntax
-Syntax errors: 15
-Warnings: 82
-*** FAILED *** with 15 errors
-Exit code: 1
-Validity: 0.01
+[Line 2784 Sent 0427.train]: [L3 WARNING fixed-without-extpos] Fixed expression 'Tabi ki' does not have the 'ExtPos' feature
+[Line 10607 Sent 1539.train]: [L3 WARNING fixed-without-extpos] Fixed expression 'Hiç bir' does not have the 'ExtPos' feature
+[Line 13410 Sent 1926.train]: [L3 WARNING pron-det-without-prontype] The word 'çok' is tagged 'DET' but it lacks the 'PronType' feature
+[Line 15003 Sent 2148.train]: [L3 WARNING fixed-without-extpos] Fixed expression 'Hiç bir' does not have the 'ExtPos' feature
+[Line 17927 Sent 2538.train]: [L3 WARNING pron-det-without-prontype] The word 'Çok' is tagged 'DET' but it lacks the 'PronType' feature
+[Line 17974 Sent 2544.train]: [L3 WARNING pron-det-without-prontype] The word 'çok' is tagged 'DET' but it lacks the 'PronType' feature
+[Line 20675 Sent 2920.train]: [L3 WARNING fixed-without-extpos] Fixed expression 'her şey' does not have the 'ExtPos' feature
+[Line 21098 Sent 2976.train]: [L3 WARNING pron-det-without-prontype] The word 'çok' is tagged 'DET' but it lacks the 'PronType' feature
+[Line 23590 Sent 3314.train]: [L3 WARNING fixed-without-extpos] Fixed expression 'koltuk vs' does not have the 'ExtPos' feature
+[Line 28259 Sent 3924.train]: [L3 WARNING pron-det-without-prontype] The word 'çok' is tagged 'DET' but it lacks the 'PronType' feature
+[Line 30300 Sent 4197.train]: [L3 WARNING fixed-without-extpos] Fixed expression 'Hiç bir' does not have the 'ExtPos' feature
+[Line 30984 Sent 4292.train]: [L3 WARNING pron-det-without-prontype] The word 'dörtlük' is tagged 'DET' but it lacks the 'PronType' feature
+[Line 30993 Sent 4293.train]: [L3 WARNING pron-det-without-prontype] The word 'dörtlük' is tagged 'DET' but it lacks the 'PronType' feature
+[Line 41357 Sent 5663.train]: [L3 WARNING fixed-without-extpos] Fixed expression 'Tabi ki' does not have the 'ExtPos' feature
+[Line 46990 Sent 6423.train]: [L3 WARNING pron-det-without-prontype] The word 'Çok' is tagged 'DET' but it lacks the 'PronType' feature
+[Line 49709 Sent 6769.train]: [L3 WARNING fixed-without-extpos] Fixed expression 'bir kaç' does not have the 'ExtPos' feature
+[Line 51871 Sent 7051.train]: [L3 WARNING fixed-without-extpos] Fixed expression 'ne zaman' does not have the 'ExtPos' feature
+[Line 51882 Sent 7052.train]: [L3 WARNING fixed-without-extpos] Fixed expression 'ne zaman' does not have the 'ExtPos' feature
+...suppressing further messages regarding WARNING/SYNTAX
+[Line 64321 Sent 0939.test]: [L3 WARNING pron-det-without-prontype] The word 'çok' is tagged 'DET' but it lacks the 'PronType' feature
+[Line 104835 Sent 6197.test]: [L3 WARNING pron-det-without-prontype] The word 'Çok' is tagged 'DET' but it lacks the 'PronType' feature
+...suppressing further messages regarding WARNING/MORPHO
+Warnings: 35
+*** PASSED ***
+Validity: 1
 (weight=0.111111111111111) * (score{features}=0.8) = 0.0888888888888889
 (weight=0.111111111111111) * (score{genres}=0.0555555555555556) = 0.00617283950617284
 (weight=0.111111111111111) * (score{lemmas}=0.8) = 0.0888888888888889
@@ -89,6 +75,6 @@ Validity: 0.01
 (weight=0.0740740740740741) * (score{split}=1) = 0.0740740740740741
 (weight=0.111111111111111) * (score{tags}=0.705882352941177) = 0.0784313725490196
 (weight=0.111111111111111) * (score{udeprels}=0.713513513513514) = 0.0792792792792793
-(TOTAL score=0.657681787891583) * (availability=1) * (validity=0.01) = 0.00657681787891583
-STARS = 0
-UD_Turkish-Tourism	0.00657681787891583	0
+(TOTAL score=0.657681787891583) * (availability=1) * (validity=1) = 0.657681787891583
+STARS = 3.5
+UD_Turkish-Tourism	0.657681787891583	3.5
